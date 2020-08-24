@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <a href="bdapp://map/direction?region=beijing&origin=39.98871,
     116.43234&destination=西直门&coord_type=bd09ll&mode=driving&src=andr.baidu.openAPIdemo">打开百度App</a>
+    <a href = "bdapp://map/newsassistant?src=andr.baidu.openAPIdemo" > 调起出行早晚报页面 </a>
 </body>
+<script>
+    // 调起出行早晚报页面
+    Intent i1 = new Intent();
+    i1.setData(Uri.parse("baidumap://map/newsassistant?src=andr.baidu.openAPIdemo"));
+    startActivity(i1);
+    //网页应用调起Android百度地图方式举例
+</script>
+
 </html>
